@@ -8,7 +8,7 @@
     <%- if rtl? %>
       <%= discourse_stylesheet_link_tag(mobile_view? ? :mobile_rtl : :desktop_rtl) %>
     <%- else %>
-      <%= discourse_stylesheet_link_tag(:desktop) %>
+      <%= discourse_stylesheet_link_tag(mobile_view? ? :mobile : :desktop) %>
     <%- end %>
     <%- if theme_ids.present? %>
       <%= discourse_stylesheet_link_tag(mobile_view? ? :mobile_theme : :desktop_theme) %>

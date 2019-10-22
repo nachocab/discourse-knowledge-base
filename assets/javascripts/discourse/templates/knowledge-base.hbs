@@ -1,7 +1,5 @@
 <div class="knowledge-base">
-  {{#unless site.mobileView}}
-    {{knowledge-base-title toggleMenu=(action 'toggleMenu')}}
-  {{/unless}}
+  {{knowledge-base-title toggleMenu=(action 'toggleMenu')}}
 
   {{knowledge-base-nav
     topicsList=topicsList
@@ -11,7 +9,7 @@
   <div class="knowledge-base-content">
     {{outlet}}
     {{#if isIndex}}
-      {{description}}
+    {{description}}
     {{/if}}
   </div>
 </div>
