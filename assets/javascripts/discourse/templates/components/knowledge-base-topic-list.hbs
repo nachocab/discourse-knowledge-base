@@ -1,17 +1,15 @@
 <div class="{{categoryClass}}">
-  <a {{action 'goToCategory'}}>
-    {{category.name}}
-  </a>
+  {{category.name}}
   <div class="controls">
     {{#if visible}}
-      {{conditional-loading-spinner condition=saving size="small"}}
-      {{#if showSortControls}}
-        {{d-button action="saveSort" label="knowledge_base.save" disabled=saving}}
-        {{d-button action="toggleSortControls" label="cancel" disabled=saving}}
-      {{/if}}
-      {{#if showSortToggle}}
-        {{d-button action="toggleSortControls" icon="list"}}
-      {{/if}}
+    {{conditional-loading-spinner condition=saving size="small"}}
+    {{#if showSortControls}}
+    {{d-button action="saveSort" label="knowledge_base.save" disabled=saving}}
+    {{d-button action="toggleSortControls" label="cancel" disabled=saving}}
+    {{/if}}
+    {{#if showSortToggle}}
+    {{d-button action="toggleSortControls" icon="list"}}
+    {{/if}}
     {{/if}}
     {{d-button action='toggleList' icon=toggleIcon}}
   </div>
@@ -20,7 +18,7 @@
 <div class="{{topicListClasses}}">
   <ul>
     {{#each sortedTopics as |topic|}}
-      {{knowledge-base-topic-list-item
+    {{knowledge-base-topic-list-item
           topic=topic
           category=category
           currentItemId=currentItemId
